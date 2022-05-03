@@ -1,27 +1,26 @@
 package com.bridgelabz.EmployeeWage;
 import java.lang.Math;
 
-class EmployeeWage {
+public class EmployeeWage {
 	
 	public static void main(String[] args) {
 		
-		double empCheck = Math.floor(Math.random()*2);
 		int IS_ABSENT = 0;
-		int IS_PRESENT = 1;
+		int IS_FULL_TIME = 1;
+		int IS_PART_TIME = 2;
 		int WAGE_PER_HOUR = 20;
 		int empHrs = 0;
 		int dailyWage = 0;
+		double empCheck = Math.floor(Math.random()*3);
 		
-		if(empCheck == IS_ABSENT) {
-			System.out.println("Employee is absent!");
-			dailyWage += empHrs*WAGE_PER_HOUR ;
-			System.out.println("Employee's salary today: "+ dailyWage);
-			}
-		else {
-			System.out.println("Employee is present!");
+		if(empCheck == IS_ABSENT)
+			empHrs = 0;
+		else if (empCheck == IS_FULL_TIME)
 			empHrs = 8;
-			dailyWage += empHrs*WAGE_PER_HOUR ;
-			System.out.println("Employee salary today: "+ dailyWage);
+		else 
+			empHrs = 4;
+		
+		dailyWage += empHrs*WAGE_PER_HOUR ;
+		System.out.println("Employee's salary today: "+ dailyWage +" $");
 		}
 	}
-}
