@@ -15,7 +15,6 @@ public class EmployeeWage {
 		int totalEmpHrs = 0;
 		int totalWorkingDays = 0;
 		
-		//for(int day = 1; day <= NUM_OF_WORKING_DAYS; day++) 
 		while (totalEmpHrs <= MAX_MONTHLY_HRS && totalWorkingDays <= NUM_OF_WORKING_DAYS ) {
 			totalWorkingDays++;
 			int empCheck = (int)Math.floor(Math.random()*3);
